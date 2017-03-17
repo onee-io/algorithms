@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/VOREVER/Workspaces/C_C++/Algorithms/InsertionSort.h
+iostream
+-
+
+/Users/VOREVER/Workspaces/C_C++/Algorithms/SelectionSort.h
+iostream
+-
+
+/Users/VOREVER/Workspaces/C_C++/Algorithms/SortTestHelper.h
+iostream
+-
+ctime
+-
+cassert
+-
+
+/Users/VOREVER/Workspaces/C_C++/Algorithms/main.cpp
+iostream
+-
+SortTestHelper.h
+/Users/VOREVER/Workspaces/C_C++/Algorithms/SortTestHelper.h
+SelectionSort.h
+/Users/VOREVER/Workspaces/C_C++/Algorithms/SelectionSort.h
+InsertionSort.h
+/Users/VOREVER/Workspaces/C_C++/Algorithms/InsertionSort.h
+
