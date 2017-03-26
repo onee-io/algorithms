@@ -1,4 +1,4 @@
-# Install script for directory: /Users/VOREVER/Workspaces/C_C++/Algorithms
+# Install script for directory: /Users/VOREVER/Workspaces/C++/Algorithms
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/VOREVER/Workspaces/C_C++/Algorithms/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/VOREVER/Workspaces/C++/Algorithms/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
