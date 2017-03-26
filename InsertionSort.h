@@ -33,4 +33,26 @@ void insertionSort(T arr[], int n) {
     }
 }
 
+/**
+ * 对arr[l...r]范围内的数组进行插入排序
+ * @tparam T
+ * @param arr
+ * @param l
+ * @param r
+ */
+template <typename T>
+void insertionSort(T arr[], int l, int r) {
+
+    for (int i = l+1; i <= r; i++) {
+        T e = arr[i];
+        int j;
+        for (j = i; j > l && arr[j-1] > e; j--) {
+            arr[j] = arr[j-1];
+        }
+        arr[j] = e;
+    }
+
+    return;
+}
+
 #endif //ALGORITHMS_INSERTIONSORT_H

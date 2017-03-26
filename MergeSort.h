@@ -6,6 +6,7 @@
 #define ALGORITHMS_MERGESORT_H
 
 #include <istream>
+#include "InsertionSort.h"
 
 using namespace std;
 
@@ -42,13 +43,21 @@ template <typename T>
 void __mergeSort(T arr[], int l, int r) {
 
     // 递归终止条件
-    if (l >= r)
+//    if (l >= r)
+//        return;
+
+    // 当子数组数量级小于一定值，使用插入排序提高效率
+    if (r - l <= 15) {
+        insertionSort(arr, l, r);
         return;
+    }
 
     int mid = (l + r) / 2;
     __mergeSort(arr, l, mid);
     __mergeSort(arr, mid + 1, r);
-    __merge(arr, l, mid, r);
+    // 对于近乎有序的数组，不需要进行归并
+    if (arr[mid] > arr[mid+1])
+        __merge(arr, l, mid, r);
 }
 
 /**
