@@ -3,6 +3,7 @@
 
 CMakeFiles/Algorithms.dir/main.cpp.o: ../InsertionSort.h
 CMakeFiles/Algorithms.dir/main.cpp.o: ../MergeSort.h
+CMakeFiles/Algorithms.dir/main.cpp.o: ../QuickSort.h
 CMakeFiles/Algorithms.dir/main.cpp.o: ../SelectionSort.h
 CMakeFiles/Algorithms.dir/main.cpp.o: ../SortTestHelper.h
 CMakeFiles/Algorithms.dir/main.cpp.o: ../main.cpp
