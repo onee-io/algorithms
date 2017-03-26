@@ -9,6 +9,32 @@
 
 using namespace std;
 
+// 双路快速排序
+// 对arr[l...r]部分进行partition操作
+// 返回p，使得arr[l...p-1] < arr[p] ; arr[p+1...r] > arr[p]
+template <typename T>
+int __partition2(T arr[], int l, int r) {
+
+    // 随机抽取一个元素与第一个元素交换
+    swap(arr[l], arr[rand()%(r-l+1)+l]);
+    T v = arr[l];
+
+    // arr[l+1...i) <= v ; arr(j...r] >= v
+    int i = l + 1, j = r;
+    while (true) {
+        while (i <= r && arr[i] < v) i++;
+        while (j >= l + 1 && arr[j] > v) j--;
+        // 循环终止条件
+        if (i > j) break;
+        swap(arr[i], arr[j]);
+        i++;
+        j--;
+    }
+    swap(arr[l], arr[j]);
+
+    return j;
+}
+
 // 对 arr[l...r] 部分进行partition操作
 // 返回p，使得arr[l...p-1] < arr[p] ; arr[p+1...r] > arr[p]
 template <typename T>
@@ -16,7 +42,6 @@ int __partition(T arr[], int l, int r) {
 
     // 随机抽取一个元素与第一个元素交换
     swap(arr[l], arr[rand()%(r-l+1)+l]);
-
     T v = arr[l];
 
     // arr[l+1...j] < v ; arr[j+1...i) > v
@@ -46,7 +71,10 @@ void __quickSort(T arr[], int l, int r) {
         return;
     }
 
-    int p = __partition(arr, l, r);
+    // 普通随机快排
+//    int p = __partition(arr, l, r);
+    // 双路快排
+    int p = __partition2(arr, l, r);
     __quickSort(arr, l, p - 1);
     __quickSort(arr, p + 1, r);
 }
