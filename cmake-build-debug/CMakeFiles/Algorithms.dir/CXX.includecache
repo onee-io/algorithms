@@ -6,15 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/Users/VOREVER/Workspaces/C_C++/Algorithms/InsertionSort.h
+/Users/VOREVER/Workspaces/C++/Algorithms/InsertionSort.h
 iostream
 -
 
-/Users/VOREVER/Workspaces/C_C++/Algorithms/SelectionSort.h
+/Users/VOREVER/Workspaces/C++/Algorithms/MergeSort.h
+istream
+-
+
+/Users/VOREVER/Workspaces/C++/Algorithms/SelectionSort.h
 iostream
 -
 
-/Users/VOREVER/Workspaces/C_C++/Algorithms/SortTestHelper.h
+/Users/VOREVER/Workspaces/C++/Algorithms/SortTestHelper.h
 iostream
 -
 ctime
@@ -22,13 +26,15 @@ ctime
 cassert
 -
 
-/Users/VOREVER/Workspaces/C_C++/Algorithms/main.cpp
+/Users/VOREVER/Workspaces/C++/Algorithms/main.cpp
 iostream
 -
 SortTestHelper.h
-/Users/VOREVER/Workspaces/C_C++/Algorithms/SortTestHelper.h
+/Users/VOREVER/Workspaces/C++/Algorithms/SortTestHelper.h
 SelectionSort.h
-/Users/VOREVER/Workspaces/C_C++/Algorithms/SelectionSort.h
+/Users/VOREVER/Workspaces/C++/Algorithms/SelectionSort.h
 InsertionSort.h
-/Users/VOREVER/Workspaces/C_C++/Algorithms/InsertionSort.h
+/Users/VOREVER/Workspaces/C++/Algorithms/InsertionSort.h
+MergeSort.h
+/Users/VOREVER/Workspaces/C++/Algorithms/MergeSort.h
 
