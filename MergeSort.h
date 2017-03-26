@@ -10,7 +10,7 @@
 
 using namespace std;
 
-// 将arr[l...mid]和arr[mid+1...r]两部分进行归并
+// 将 arr[l...mid] 和 arr[mid+1...r] 两部分进行归并
 template <typename T>
 void __merge(T arr[], int l, int mid, int r) {
 
@@ -61,7 +61,7 @@ void __mergeSort(T arr[], int l, int r) {
 }
 
 /**
- * 归并排序
+ * 自顶向下的归并排序
  * @tparam T
  * @param arr
  * @param n
@@ -70,6 +70,21 @@ template <typename T>
 void mergeSort(T arr[], int n) {
 
     __mergeSort(arr, 0, n-1);
+}
+
+/**
+ * 自底向上的归并排序
+ * @tparam T
+ * @param arr
+ * @param n
+ */
+template <typename T>
+void mergeSortBU(T arr[], int n) {
+
+    for (int sz = 1; sz <= n; sz += sz)
+        for (int i = 0; i + sz < n; i += sz + sz)
+            // 对 arr[i...i+sz-1] 和 arr[i+sz...i+2*sz-1] 进行归并
+            __merge(arr, i, i + sz - 1, min(i + sz + sz - 1, n - 1));
 }
 
 #endif //ALGORITHMS_MERGESORT_H
