@@ -89,6 +89,9 @@
 		<Unit filename="/Users/VOREVER/Workspaces/C++/Algorithms/MergeSort.h">
 			<Option target="Algorithms"/>
 		</Unit>
+		<Unit filename="/Users/VOREVER/Workspaces/C++/Algorithms/QuickSort.h">
+			<Option target="Algorithms"/>
+		</Unit>
 		<Unit filename="/Users/VOREVER/Workspaces/C++/Algorithms/SelectionSort.h">
 			<Option target="Algorithms"/>
 		</Unit>

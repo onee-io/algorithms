@@ -16,6 +16,10 @@ istream
 InsertionSort.h
 /Users/VOREVER/Workspaces/C++/Algorithms/InsertionSort.h
 
+/Users/VOREVER/Workspaces/C++/Algorithms/QuickSort.h
+iostream
+-
+
 /Users/VOREVER/Workspaces/C++/Algorithms/SelectionSort.h
 iostream
 -
@@ -39,4 +43,6 @@ InsertionSort.h
 /Users/VOREVER/Workspaces/C++/Algorithms/InsertionSort.h
 MergeSort.h
 /Users/VOREVER/Workspaces/C++/Algorithms/MergeSort.h
+QuickSort.h
+/Users/VOREVER/Workspaces/C++/Algorithms/QuickSort.h
 
