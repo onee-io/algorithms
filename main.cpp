@@ -8,17 +8,23 @@
 using namespace std;
 
 int main() {
+
     int n = 1000000;
-    int *arr = SortTestHelper::generateRandomArray(n, 0, n);
-    int *arr2 = SortTestHelper::copyIntArray(arr, n);
 
     cout<<"Test for Random Array, size = "<<n<<", random range [0, "<<n<<"]"<<endl;
-//    SortTestHelper::testSort("Selection Sort", selectionSort, arr, n);
-//    SortTestHelper::testSort("Insertion Sort", insertionSort, arr, n);
-    SortTestHelper::testSort("Merge Sort", mergeSort, arr, n);
+    int *arr1 = SortTestHelper::generateRandomArray(n, 0, n);
+    int *arr2 = SortTestHelper::copyIntArray(arr1, n);
+    SortTestHelper::testSort("Merge Sort", mergeSort, arr1, n);
     SortTestHelper::testSort("Quick Sort", quickSort, arr2, n);
 
-    delete(arr);
+    int swapTimes = 100;
+    cout<<"Test for Random Nearly Ordered Array, size = "<<n<<", swap time = "<<swapTimes<<endl;
+    arr1 = SortTestHelper::generateNearlyOrderedArray(n, swapTimes);
+    arr2 = SortTestHelper::copyIntArray(arr1, n);
+    SortTestHelper::testSort("Merge Sort", mergeSort, arr1, n);
+    SortTestHelper::testSort("Quick Sort", quickSort, arr2, n);
+
+    delete(arr1);
     delete(arr2);
 
     return 0;

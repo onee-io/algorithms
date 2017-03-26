@@ -14,6 +14,9 @@ using namespace std;
 template <typename T>
 int __partition(T arr[], int l, int r) {
 
+    // 随机抽取一个元素与第一个元素交换
+    swap(arr[l], arr[rand()%(r-l+1)+l]);
+
     T v = arr[l];
 
     // arr[l+1...j] < v ; arr[j+1...i) > v
@@ -34,8 +37,14 @@ template <typename T>
 void __quickSort(T arr[], int l, int r) {
 
     // 递归终止条件
-    if (l >= r)
+//    if (l >= r)
+//        return;
+
+    // 当子数组数量级小于一定值，使用插入排序提高效率
+    if (r - l <= 15) {
+        insertionSort(arr, l, r);
         return;
+    }
 
     int p = __partition(arr, l, r);
     __quickSort(arr, l, p - 1);
@@ -51,6 +60,7 @@ void __quickSort(T arr[], int l, int r) {
 template <typename T>
 void quickSort(T arr[], int n) {
 
+    srand(time(NULL));
     __quickSort(arr, 0, n - 1);
 }
 
