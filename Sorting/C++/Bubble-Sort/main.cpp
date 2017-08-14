@@ -1,5 +1,5 @@
 #include <iostream>
-#include "SortTestHelper.h"
+#include "../Util/SortTestHelper.h"
 #include "SelectionSort.h"
 #include "InsertionSort.h"
 #include "MergeSort.h"
